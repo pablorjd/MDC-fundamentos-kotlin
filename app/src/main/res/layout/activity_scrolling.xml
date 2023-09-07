@@ -16,6 +16,7 @@
         app:navigationIcon="@drawable/ic_menu_white"
         app:menu="@menu/menu_scrolling"
         app:hideOnScroll="true"
+        app:fabAnimationMode="slide"
         style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
         />
     <com.google.android.material.floatingactionbutton.FloatingActionButton

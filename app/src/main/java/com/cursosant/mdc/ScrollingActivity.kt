@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.cursosant.mdc.databinding.ActivityScrollingBinding
+import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.snackbar.Snackbar
 
 class ScrollingActivity : AppCompatActivity() {
@@ -16,6 +17,14 @@ class ScrollingActivity : AppCompatActivity() {
 
         binding = ActivityScrollingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.fab.setOnClickListener{
+            if ( binding.bottomAppBar.fabAlignmentMode == BottomAppBar.FAB_ALIGNMENT_MODE_CENTER ) {
+                binding.bottomAppBar.fabAlignmentMode = BottomAppBar.FAB_ALIGNMENT_MODE_END
+            } else {
+                binding.bottomAppBar.fabAlignmentMode = BottomAppBar.FAB_ALIGNMENT_MODE_CENTER
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
