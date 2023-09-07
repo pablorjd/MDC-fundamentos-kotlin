@@ -8,10 +8,263 @@
     tools:context=".ScrollingActivity"
     tools:showIn="@layout/activity_scrolling">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text"/>
+        android:orientation="vertical"
+        android:layout_marginBottom="?attr/actionBarSize">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:layout_marginStart="@dimen/common_padding_min"
+            android:layout_marginEnd="@dimen/common_padding_min"
+            app:cardElevation="@dimen/common_padding_min"
+            android:clickable="true"
+            android:visibility="visible"
+            android:focusable="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/common_padding_defauld"
+                android:paddingStart="@dimen/common_padding_defauld"
+                android:paddingEnd="@dimen/common_padding_defauld">
+                
+                <ImageView
+                    android:id="@+id/btnCard"
+                    android:layout_width="@dimen/card_img_size"
+                    android:layout_height="@dimen/card_img_size"
+                    android:src="@mipmap/ic_launcher"
+                    android:contentDescription="@string/this_is_a_image"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnComprar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_comprar"
+                    app:icon="@drawable/ic_shopping_bag"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnCard"
+                    android:layout_marginTop="@dimen/common_padding_min"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSkip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_sky"
+                    android:textSize="14dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/btnComprar"
+                    app:layout_constraintTop_toTopOf="@+id/btnComprar"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/black_friday"
+                    android:layout_marginStart="@dimen/common_padding_defauld"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    app:layout_constraintStart_toEndOf="@+id/btnCard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="@string/large_text"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    app:layout_constraintStart_toStartOf="@+id/tvTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                    app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnCard"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:layout_marginStart="@dimen/common_padding_min"
+            android:layout_marginEnd="@dimen/common_padding_min">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgCover"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/card_img_cover_height"
+                    android:importantForAccessibility="no"
+                    android:background="@color/design_default_color_secondary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/TvTitleAlt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/common_padding_defauld"
+                    android:text="@string/black_friday"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgCover"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilUrl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/card_input_url"
+                    app:helperText="@string/card_required"
+                    app:endIconMode="clear_text"
+                    android:layout_marginTop="@dimen/common_padding_defauld"
+                    app:layout_constraintTop_toBottomOf="@+id/TvTitleAlt"
+                    app:layout_constraintStart_toStartOf="@+id/TvTitleAlt"
+                    app:layout_constraintEnd_toEndOf="@+id/TvTitleAlt"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etUrl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textUri"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/card_password"
+                    android:layout_marginTop="@dimen/common_padding_defauld"
+                    app:endIconMode="password_toggle"
+                    android:enabled="false"
+                    app:layout_constraintStart_toStartOf="@+id/TvTitleAlt"
+                    app:layout_constraintEnd_toEndOf="@+id/TvTitleAlt"
+                    app:layout_constraintTop_toBottomOf="@+id/tilUrl"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cbEnablepass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_padding_defauld"
+                    android:text="@string/enablePass"
+                    app:layout_constraintStart_toStartOf="@+id/TvTitleAlt"
+                    app:layout_constraintTop_toBottomOf="@+id/tilPassword"
+                    />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/color_divider"
+                    android:layout_marginTop="@dimen/common_padding_middle"
+                    app:layout_constraintStart_toStartOf="@+id/TvTitleAlt"
+                    app:layout_constraintEnd_toEndOf="@+id/TvTitleAlt"
+                    app:layout_constraintTop_toBottomOf="@+id/cbEnablepass"/>
+
+                <TextView
+                    android:id="@+id/tvSubTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/black_friday"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:layout_marginTop="@dimen/common_padding_middle"
+                    app:layout_constraintStart_toStartOf="@+id/TvTitleAlt"
+                    app:layout_constraintEnd_toEndOf="@+id/TvTitleAlt"
+                    app:layout_constraintTop_toBottomOf="@+id/divider"
+                    />
+
+                <TextView
+                    android:id="@+id/tvMessageAlt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/large_text"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:maxLines="5"
+                    android:ellipsize="end"
+                    android:layout_marginTop="@dimen/common_padding_defauld"
+                    app:layout_constraintStart_toStartOf="@+id/TvTitleAlt"
+                    app:layout_constraintEnd_toEndOf="@+id/TvTitleAlt"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSubTitle"
+                    />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/toggle_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMessageAlt"
+                    android:layout_marginTop="@dimen/common_padding_defauld">
+
+                    <Button
+                        android:id="@+id/btnRed"
+                        android:text="@string/toggleRede"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <Button
+                        android:id="@+id/btnBlue"
+                        android:text="@string/toggleBlue"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <Button
+                        android:id="@+id/btnGreen"
+                        android:text="@string/toggleGreen"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_sky"
+                    android:layout_marginTop="@dimen/common_padding_middle"
+                    android:layout_marginBottom="@dimen/common_padding_min"
+
+                    app:layout_constraintEnd_toEndOf="@+id/TvTitleAlt"
+                    app:layout_constraintTop_toBottomOf="@+id/toggle_button"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Dialog.Flush"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

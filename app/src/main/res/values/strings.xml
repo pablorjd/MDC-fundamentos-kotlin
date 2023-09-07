@@ -1,9 +1,7 @@
 <resources>
     <string name="app_name">MDC</string>
     <string name="large_text">
-"Material is the metaphor.\n\n"
-
-"A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
 "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
 "technologically advanced and open to imagination and magic.\n"
 "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
@@ -90,4 +88,16 @@
 "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="this_component_add_task">This component add Task</string>
+    <string name="this_is_a_image">this is a image</string>
+    <string name="btn_comprar">Comprar</string>
+    <string name="btn_sky">Skip</string>
+    <string name="black_friday">Black Friday</string>
+    <string name="card_input_url">Img Url</string>
+    <string name="card_required">required</string>
+    <string name="card_password">password</string>
+    <string name="enablePass">Enable Password</string>
+    <string name="toggleRede">Red</string>
+    <string name="toggleBlue">Blue</string>
+    <string name="toggleGreen">Green</string>
 </resources>
