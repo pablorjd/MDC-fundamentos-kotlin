@@ -16,6 +16,7 @@
         android:layout_marginBottom="?attr/actionBarSize">
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_padding_min"

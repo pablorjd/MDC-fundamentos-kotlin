@@ -100,4 +100,8 @@
     <string name="toggleRede">Red</string>
     <string name="toggleBlue">Blue</string>
     <string name="toggleGreen">Green</string>
+    <string name="evento_exitoso">Evento Exitoso</string>
+    <string name="comprar">Comprado</string>
+    <string name="card_to_go">Ir a Comprar</string>
+    <string name="go_to">Historial</string>
 </resources>
