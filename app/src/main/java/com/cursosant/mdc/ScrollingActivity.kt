@@ -54,12 +54,12 @@ class ScrollingActivity : AppCompatActivity() {
             binding.scrollingContent.tilPassword.isEnabled = !binding.scrollingContent.tilPassword.isEnabled
         }
 
-        Glide.with(this)
+       /* Glide.with(this)
             .load("https://www.adslzone.net/app/uploads-adslzone.net/2020/04/android.jpg")
             .diskCacheStrategy(DiskCacheStrategy.ALL)
             .centerCrop()
-            .into(binding.scrollingContent.imgCover)
-       // loadImage()
+            .into(binding.scrollingContent.imgCover) */
+       loadImage()
         binding.scrollingContent.etUrl.onFocusChangeListener = View.OnFocusChangeListener { _, focused ->
             val url = binding.scrollingContent.etUrl.text.toString()
             var errorStr:String? = null
