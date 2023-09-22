@@ -104,4 +104,7 @@
     <string name="comprar">Comprado</string>
     <string name="card_to_go">Ir a Comprar</string>
     <string name="go_to">Historial</string>
+    <string name="card_url_invalid_url">Invalid URL</string>
+    <string name="card_hide_fab">Hide Fab</string>
+    <string name="show_fab">Show Fab</string>
 </resources>
